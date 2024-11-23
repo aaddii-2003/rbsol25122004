@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Robust Solution</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.login {
+    padding: 50px 0;
+}
+
+.box-area {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-box {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.right-box .form-control {
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.google {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+/* Ensures the body and html elements take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+/* This ensures the content grows to take all available space */
+.content-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjusts the main content so it doesn't overlap with footer */
+.main-content {
+    flex: 1;
+}
+
+/* Prevents horizontal scroll and improves responsiveness */
+@media (max-width: 700px) {
+    .box-area {
+        margin: 0 10px;
+    }
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}
+/* Navbar Styling */
+.navbar-brand {
+    font-weight: 800;
+    height: 100px;
+    position: absolute;
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 50px;
+}
+
+.nav-link {
+    color: #eeeef2;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #1c30c5;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+    background-color: blue;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1238c0;
+    visibility: visible;
+    transition: width 0.3s ease-in-out;
+}
+/* Footer Styling */
+footer {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 60px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.hrx {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+}
+
+.underlinex {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.underlinex span {
+    width: 15px;
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+    position: absolute;
+}
+
+@keyframes moving {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.footer a {
+    color: white;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: rgb(249, 241, 241);
+    text-decoration: none !important;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: rgb(247, 248, 248);
+    margin: 0 10px;
+}
+
+.social-icons i:hover {
+    color: #223ac3;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+      <!-- Navbar -->
+   <!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="home (1).html">Robust Solution</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Login Page -->
+    <div class="login">
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+            <div class="row border rounded-5 p-3 bg-white shadow box-area">
+                <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+                    <p class="fs-2">Be Verified</p>
+                    <small class="text-wrap text-center">Welcome Back to Community</small>
+                </div>
+                <div class="col-md-6 right-box">
+                    <div class="header-text mb-4">
+                        <h2>Welcome,</h2>
+                        <p>We are Happy to have you back.</p>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg bg-light" placeholder="Email address">
+                    </div>
+                    <div class="input-group mb-1">
+                        <input type="password" class="form-control form-control-lg bg-light" placeholder="Password">
+                    </div>
+                    <div class="input-group mb-5 d-flex">
+                        <input type="checkbox" class="form-check-input" id="formCheck">
+                        <label htmlFor="formCheck" class="form-check-label text-secondary" style="padding-left: 10px;">
+                            <small>Remember Me</small>
+                        </label>
+                    </div>
+                    <div class="forgot mb-3">
+                        <small><a href="#">Forgot Password?</a></small>
+                    </div>
+                    <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-primary w-100">Login</button>
+                    </div>
+                    <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-light w-100 google">
+                            <small>Sign In with Google</small>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <small>Don't have an account? <a href="register (1).html">Sign Up</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Content -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <br/>
+                    <h6>Company Information<div class="underlinex"><span></span></div></h6>
+                    <hr/>
+                    <p class="text-white">
+                        Robust Solution is a leader in providing custom website creation and business solutions. We specialize in building dynamic and user-friendly websites for businesses of all sizes.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <br/>
+                    <h6>Quick Links<div class="underlinex"><span></span></div></h6>
+                    <hr/>
+                    <div> <a href="/" class="nav-link mx-lg-2">Home</a></div>
+                    <div> <a href="/services" class="nav-link mx-lg-2">Our Services</a></div>
+                    <div> <a href="/about" class="nav-link mx-lg-2">About Us</a></div>
+                    <div><a href="/contact" class="nav-link mx-lg-2">Contact Us</a></div>
+                </div>
+
+                <div class="col-md-4">
+                    <br/>
+                    <h6>Contact Information<div class="underlinex"><span></span></div></h6>
+                    <hr/>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="hrx"/>
+        <p class="copyright">Robust Solution 2024 - All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

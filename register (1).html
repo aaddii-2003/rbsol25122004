@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Robust Solution</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hrx {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #f8f4f4;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+}
+
+.underlinex {
+    width: 100%;
+    height: 5px;
+    background: #f5f3f3;
+    border-radius: 3px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.underlinex span {
+    width: 15px;
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+    position: absolute;
+}
+
+@keyframes moving {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}
+
+@media only screen and (max-width: 700px) {
+    .box-area {
+        margin: 0 10px;
+    }
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 60px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: rgb(249, 241, 241);
+    text-decoration: none !important;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: rgb(247, 248, 248);
+    margin: 0 10px;
+}
+
+.social-icons i:hover {
+    color: #223ac3;
+}
+
+/* Navbar Styling */
+.navbar-brand {
+    font-weight: 800;
+    padding-top: 10px;
+    font-size: 3rem !important;  /* Use !important to force the font-size */
+    transition: font-size 0.3s ease-in-out;
+}
+
+/* For responsiveness */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 2.5rem !important;  /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 2rem !important;  /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.5rem !important;  /* Adjust for very small screens */
+    }
+}
+
+.navbar-nav .nav-link {  /* Increase specificity */
+    color: white;  /* Change the color to white */
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.nav-link:hover {
+    color: #1c30c5;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+    background-color: blue;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1238c0;
+    visibility: visible;
+    transition: width 0.3s ease-in-out;
+}
+
+
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+   <!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Robust Solution</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Signup Page -->
+<div class="signup">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+                <p class="text-dark fs-2 text-black contenttext">Join Us</p>
+                <small class="text-dark text-wrap text-center smalltext">Become a part of our community</small>
+            </div>
+            <div class="col-md-6 right-box">
+                <div class="header-text mb-4">
+                    <h2>Sign Up</h2>
+                    <p>Create an account to get started.</p>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6 rounded-3" placeholder="Username">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6 rounded-3" placeholder="Email address">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6 rounded-3" placeholder="Password">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6 rounded-3" placeholder="Confirm Password">
+                </div>
+
+                <div class="input-group mb-3">
+                    <select class="form-control form-control-lg bg-light fs-6 rounded-3">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control form-control-lg bg-light fs-6 rounded-3" placeholder="Age">
+                </div>
+
+                <div class="input-group mb-3">
+                    <button class="btn btn-lg btn-primary w-100 fs-6 rounded-3" style="height: 48px;">Sign Up</button>
+                </div>
+
+                <div class="row">
+                    <small>Already have an account? <a href="login.html">Login</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- Footer Content -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <br/>
+                <h6>Company Information<div class="underlinex"><span></span></div></h6>
+                <hr/>
+                <p class="text-white">
+                    Robust Solution is a leader in providing custom website creation and business solutions. We specialize in building dynamic and user-friendly websites for businesses of all sizes.</p>
+            </div>
+
+            <div class="col-md-4">
+                <br/>
+                <h6>Quick Links<div class="underlinex"><span></span></div></h6>
+                <hr/>
+                <div> <a href="/" class="nav-link mx-lg-2">Home</a></div>
+                <div> <a href="/services" class="nav-link mx-lg-2">Our Services</a></div>
+                <div> <a href="/about" class="nav-link mx-lg-2">About Us</a></div>
+                <div><a href="/contact" class="nav-link mx-lg-2">Contact</a></div>
+            </div>
+
+            <div class="col-md-4">
+                <br/>
+                <h6>Follow Us<div class="underlinex"><span></span></div></h6>
+                <hr/>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="copyright">
+            <p>© 2024 Robust Solution. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
